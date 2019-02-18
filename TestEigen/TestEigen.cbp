@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="/usr/local/include/eigen3" />
+			<Add directory="/usr/include/eigen3" />
 		</Compiler>
 		<Unit filename="main.cpp" />
 		<Extensions>
