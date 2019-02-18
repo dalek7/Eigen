@@ -12,8 +12,8 @@ void TestEigenMatrix2();
 
 int main()
 {
-    //TestEigenMatrix1();
-    TestEigenMatrix2();
+    TestEigenMatrix1();
+	//TestEigenMatrix2();
     cout << "Finished!" << endl;
     return 0;
 }
