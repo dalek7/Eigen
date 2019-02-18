@@ -1,3 +1,8 @@
+# custom
+[Bb]in/
+[Dd]ebug/
+
+
 # Prerequisites
 *.d
 
