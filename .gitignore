@@ -1,6 +1,8 @@
 # custom
 [Bb]in/
 [Dd]ebug/
+x86/
+x64/
 
 
 # Prerequisites
