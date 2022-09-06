@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/seung/repos-cpp/0_Fundamental/01_eigen/build",
-  "command": "/usr/bin/g++   -I/usr/local/include/eigen3  -g   -o CMakeFiles/EigenTest.dir/main.cpp.o -c /home/seung/repos-cpp/0_Fundamental/01_eigen/main.cpp",
-  "file": "/home/seung/repos-cpp/0_Fundamental/01_eigen/main.cpp"
-}
-]
