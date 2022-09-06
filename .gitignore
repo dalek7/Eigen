@@ -4,7 +4,8 @@
 x86/
 x64/
 todo/
-
+.vscode
+build/
 
 # Prerequisites
 *.d
