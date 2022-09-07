@@ -33,12 +33,17 @@ int main(int, char**) {
     cout << "Another example" << endl;
     v1 = dhVector(-0.03, -0.3, 0.5);
     v2 = dhVector(0, 0, 1);
+
+    v1 = v1.Unit();
+    
     q1.makeRotate(v1, v2);
     cout << q1 <<endl;
     cout << q1.asMatrix() << endl;
-
+    H = q1.asMatrix();
+    
     dhVector4 v1h = dhVector4(v1.x, v1.y, v1.z, 1);
-    cout <<"Initial : "<<  v1h << endl;
+    cout <<"Initial : "<<  v1 << endl;
+    cout <<"Target : "<<  v2 << endl;
     cout <<"Transform H : \n"<<  H << endl;
     //dhVector4 v1h_tr = H * v1h; // needs to be done
     dhVector v1h_tr = H * v1;
