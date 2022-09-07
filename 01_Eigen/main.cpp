@@ -4,17 +4,49 @@
 #include <Eigen/Core>
 #include <Eigen/Dense> // for eig solver
 #include <Eigen/Geometry>
+
+
+#include "eigen_util.h"
+
 using namespace Eigen;
 using namespace std;
 void quattest();
 void helloeig();
+void makeRotateTest();
 
 
 int main(int, char**) {
 
-    helloeig(); 
+    //helloeig(); 
+    makeRotateTest();
 
     return 0;
+}
+
+
+
+#include <Eigen/Geometry>
+void makeRotateTest()
+{
+    Vector3f v1, v2;
+    v1 <<-0.03, -0.3, 0.5;
+    v2 <<0, 0, 1;
+    
+    v1.normalize();
+    v2.normalize();
+    //cout<<  v1.x() <<endl;
+    cout << v1.transpose() <<endl;
+    cout << v2.transpose() <<endl;
+
+    Eigen::Quaternionf q2 = makeRotate(v1, v2);
+
+    cout << "q = [x y z w]"<<endl;
+    cout << q2.x() << ", " << q2.y() << ", "<< q2.z() << ", " << q2.w() <<endl;
+    cout <<endl;
+    cout << q2.toRotationMatrix() <<endl;
+    cout << endl;
+    Vector3f v1_transformed = q2*v1;
+    cout <<"transformed : \n" << v1_transformed <<endl;
 }
 
 // based on https://github.com/gaoxiang12/slambook2/blob/master/ch3/useEigen/eigenMatrix.cpp
