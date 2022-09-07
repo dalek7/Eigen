@@ -6,6 +6,8 @@ x64/
 todo/
 .vscode
 build/
+*.asv # matlab autosave
+*.bak
 
 # Prerequisites
 *.d
