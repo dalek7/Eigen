@@ -8,6 +8,8 @@ todo/
 build/
 *.asv # matlab autosave
 *.bak
+.idea
+
 
 # Prerequisites
 *.d
