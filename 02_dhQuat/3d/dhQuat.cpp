@@ -15,7 +15,8 @@
 
 using namespace std;
 ostream & operator<<(ostream & out, const dhQuat quat) {
-   out << "(" << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ", " << quat.w() << ")";  // access private data
+   //out << "(" << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ", " << quat.w() << ")";  // access private data
+   out << "(" << quat.w() << ", " << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ")";  
    return out;
 }
 

@@ -1,5 +1,24 @@
 #ifndef __Eigen_Utils__
 #define __Eigen_Utils__
+#include <iostream>
+
+
+using namespace std;
+/*
+template <typename T>
+ostream & print(ostream &out, const T quat) {
+   //ostream out;
+   out << "(" << << quat.w() << ", " << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ")";  
+   return out;
+}
+
+template <typename T>
+ostream & operator<<(ostream & out, const T quat) {
+   //out << "(" << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ", " << quat.w() << ")";  // access private data
+   out << "(" << quat.w() << ", " << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ")";  
+   return out;
+}
+*/
 
 // based on the ofQuaternion 
 
