@@ -23,7 +23,20 @@ int main(int, char**) {
     return 0;
 }
 
+void helloQuat()
+{
+    // https://www.cc.gatech.edu/classes/AY2015/cs4496_spring/Eigen.html
+    Eigen::Quaterniond q(2, 0, 1, -3); 
+    cout <<"Eigen::Quaterniond q(2, 0, 1, -3) " <<endl;
+    cout << "q(w, x, y, z)" << endl;
+    cout << "This quaternion consists of a scalar " << q.w() << " and a vector " << endl << q.vec() << endl;
 
+    q.normalize();
+    cout << "To represent rotation, we need to normalize it such that its length is " << q.norm() << endl;
+    cout << "q = [w x y z]"<<endl;
+    cout << q.w() << ", " << q.x() << ", "<< q.y() << ", " << q.z() <<endl;
+    cout << q <<endl; //operator test
+}
 
 #include <Eigen/Geometry>
 void makeRotateTest()
@@ -39,7 +52,7 @@ void makeRotateTest()
     cout << v2.transpose() <<endl;
 
     Eigen::Quaternionf q2 = makeRotate(v1, v2);
-
+    //cout << printQuat(q2) <<endl;
     cout << "q = [ w x y z]"<<endl;
     cout << q2.w() << ", " << q2.x() << ", "<< q2.y() << ", " << q2.z() <<endl;
     cout <<endl;
@@ -48,20 +61,7 @@ void makeRotateTest()
     Vector3f v1_transformed = q2*v1;
     cout <<"transformed : \n" << v1_transformed <<endl;
 }
-void helloQuat()
-{
-    // https://www.cc.gatech.edu/classes/AY2015/cs4496_spring/Eigen.html
-    Eigen::Quaterniond q(2, 0, 1, -3); 
-    cout <<"Eigen::Quaterniond q(2, 0, 1, -3) " <<endl;
-    cout << "q(w, x, y, z)" << endl;
-    cout << "This quaternion consists of a scalar " << q.w() << " and a vector " << endl << q.vec() << endl;
 
-    q.normalize();
-    cout << "To represent rotation, we need to normalize it such that its length is " << q.norm() << endl;
-    cout << "q = [w x y z]"<<endl;
-    cout << q.w() << ", " << q.x() << ", "<< q.y() << ", " << q.z() <<endl;
-    
-}
 // based on https://github.com/gaoxiang12/slambook2/blob/master/ch3/useEigen/eigenMatrix.cpp
 void helloeig()
 {

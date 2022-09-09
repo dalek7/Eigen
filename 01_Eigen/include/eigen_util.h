@@ -2,25 +2,24 @@
 #define __Eigen_Utils__
 #include <iostream>
 
+// written based on the ofQuaternion 
+// dalek7 @Suwon
 
 using namespace std;
-/*
-template <typename T>
-ostream & print(ostream &out, const T quat) {
-   //ostream out;
-   out << "(" << << quat.w() << ", " << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ")";  
-   return out;
+
+
+std::ostream& operator<<(std::ostream& os, Eigen::Quaternionf& quat) 
+{
+    os << quat.w() << ", " << quat.x() << ", " << quat.y()<< ", "<< quat.z(); 
+    return os;
 }
 
-template <typename T>
-ostream & operator<<(ostream & out, const T quat) {
-   //out << "(" << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ", " << quat.w() << ")";  // access private data
-   out << "(" << quat.w() << ", " << quat.x() << ", " << quat.y()<< ", "<< quat.z() << ")";  
-   return out;
+std::ostream& operator<<(std::ostream& os, Eigen::Quaterniond& quat) 
+{
+    os << quat.w() << ", " << quat.x() << ", " << quat.y()<< ", "<< quat.z(); 
+    return os;
 }
-*/
 
-// based on the ofQuaternion 
 
 #ifndef PI
 	#define PI       3.14159265358979323846
@@ -31,7 +30,7 @@ ostream & operator<<(ostream & out, const T quat) {
 #endif
 
 static inline 
-float DegToRad(float degrees) {
+double DegToRad(double degrees) {
     return degrees * DEG_TO_RAD;
 }
 
