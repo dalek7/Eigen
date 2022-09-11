@@ -12,7 +12,7 @@ else(WIN32)
 endif (UNIX)
 
 include_directories(${EIGEN3_INCLUDE_DIR} 
-                    ./Thirdparty/Sophus
+                    ../common/Thirdparty/Sophus
                     ../common/include)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
