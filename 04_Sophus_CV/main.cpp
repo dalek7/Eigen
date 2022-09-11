@@ -12,6 +12,7 @@ using namespace Sophus;
 
 const float eps = 1e-4;
 
+//https://blog.csdn.net/xiaoma_bk/article/details/121158471
 cv::Mat ExpSO3(const float &x, const float &y, const float &z)
 {
     cv::Mat I = cv::Mat::eye(3,3,CV_32F);

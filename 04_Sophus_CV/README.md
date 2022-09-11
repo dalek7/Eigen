@@ -15,3 +15,7 @@ ExpSO3
  0.0998334   0.995004          0
          0          0          1
 ```
+
+### TODO
+* Add equations
+    * https://blog.csdn.net/xiaoma_bk/article/details/121158471
