@@ -7,6 +7,7 @@
 
 using namespace std;
 
+#include <Eigen/Geometry>
 
 std::ostream& operator<<(std::ostream& os, Eigen::Quaternionf& quat) 
 {
