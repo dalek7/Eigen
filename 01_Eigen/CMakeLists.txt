@@ -15,7 +15,7 @@ endif (UNIX)
 
 
 include_directories(${EIGEN3_INCLUDE_DIR} 
-                    ./include)
+                    ../common/include)
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -13,7 +13,7 @@ endif (UNIX)
 
 include_directories(${EIGEN3_INCLUDE_DIR} 
                     ./Thirdparty/Sophus
-                    ./include)
+                    ../common/include)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
