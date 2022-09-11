@@ -1,11 +1,14 @@
 #include <iostream>
+
+#include "sophus/sim3.hpp"
 #include <opencv2/opencv.hpp>
 
 #include "eigen_util.h"
-#include "sophus/sim3.hpp"
 
-using namespace cv;
+
+//using namespace cv;
 using namespace Sophus;
+
 
 const float eps = 1e-4;
 
@@ -34,12 +37,12 @@ cv::Mat ExpSO3(const cv::Mat &v)
 int main(int, char**) {
     
     float deg =  M_PI/2;
-    Mat m= ExpSO3(0, 0, deg);
+    cv::Mat m= ExpSO3(0, 0, deg);
     cout << m <<endl;
     cout <<endl;
 
     Sophus::SO3d::Point point1 = Sophus::SO3d::Point(0, 0, deg);
-    SO3 rot = SO3::exp(point1);
+    Sophus::SO3 rot = Sophus::SO3::exp(point1);
     cout << rot.matrix() <<endl;   
 
     deg = 0.1;
