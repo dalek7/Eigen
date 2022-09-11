@@ -13,15 +13,38 @@ using namespace std;
 void quattest();
 void helloeig();
 void makeRotateTest();
+void makeRotateTest2();
 void helloQuat();
 
 int main(int, char**) {
 
     //helloeig(); 
     //makeRotateTest();
-    helloQuat();
+    //helloQuat();
+    makeRotateTest2();
+   
+
     return 0;
 }
+
+void makeRotateTest2()
+{
+    Vector3f v1, v2;
+    v1 << 0, 1, 0;
+    v2 << -0.106925,0.76072,0.640212;
+    
+    v1.normalize();
+    v2.normalize();
+
+    cout << v1.transpose() <<endl;
+    cout << "--->" <<endl;
+    cout << v2.transpose() <<endl;
+
+    Eigen::Quaternionf q2 = makeRotate(v1, v2);
+    cout << "quat=" <<endl << q2 << endl<< endl;
+    cout << q2.matrix() << endl;
+}
+
 
 void helloQuat()
 {
@@ -45,6 +68,9 @@ void makeRotateTest()
     v1 <<-0.03, -0.3, 0.5;
     v2 <<0, 0, 1;
     
+    v1 << -0.106925,0.76072,0.640212;
+    v2 << 0, 1, 0;
+
     v1.normalize();
     v2.normalize();
     //cout<<  v1.x() <<endl;
