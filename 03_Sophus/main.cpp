@@ -15,7 +15,7 @@ void test1();
 void test2();
 
 int main(int, char**) {
-    test2();
+    test1();
 }
 
 
@@ -98,6 +98,12 @@ void test1()
 {
     // https://github.com/dalek7/Algorithms/blob/master/Sophus/SophusTest/SophusTest/SimpleTest.h
     //SO3 disturbance = SO3::exp(Sophus::Vector3d(0.05,0,0));
+    Point omega0 = Point(0.0,0.0,0.0);
+    SO3 disturbance0 = SO3::exp(omega0);
+    cout <<"Point omega0 = Point(0.0,0.0,0.0)" << endl;
+    cout << disturbance0.matrix() << endl;
+    cout << endl; 
+
     Point omega1 = Point(0.05,0,0);
     SO3 disturbance1 = SO3::exp(omega1);
 
