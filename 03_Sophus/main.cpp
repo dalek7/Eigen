@@ -104,6 +104,16 @@ void test1()
     cout << disturbance0.matrix() << endl;
     cout << endl; 
 
+    omega0 = Point(0.0, M_PI * 1.0, 0.0);
+    disturbance0 = SO3::exp(omega0);
+    cout <<"Point omega0 = Point(0.0, M_PI * 1.0, 0.0)" << endl;
+    cout << disturbance0.matrix() << endl;
+    cout << endl; 
+
+    Matrix3d R = AngleAxisd(M_PI , Vector3d(0, 1, 0)).toRotationMatrix(); //Y축을 기준으로 180도 (=pi) 만큼 회전
+    cout <<"R= AngleAxisd(M_PI , Vector3d(0, 1, 0)) = " <<endl << R <<endl;
+    cout <<" These two are equivalent. "<<endl;
+
     Point omega1 = Point(0.05,0,0);
     SO3 disturbance1 = SO3::exp(omega1);
 
