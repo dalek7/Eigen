@@ -44,7 +44,16 @@ void makeRotateTest2()
 
     Eigen::Quaternionf q2 = makeRotate(v1, v2);
     cout << "quat=" <<endl << q2 << endl<< endl;
-    cout << q2.matrix() << endl;
+    cout << q2.matrix() << endl<< endl;
+
+    Eigen::Matrix3f q2m = q2.matrix(); // column-wise
+    //cout << q2m(0) << ", " <<q2m(1)<< ", " <<q2m(2) << ", " <<q2m(3)<< endl; 
+    cout << q2m(0) << ", " <<q2m(3)<< ", " <<q2m(6) << endl; 
+    cout << q2m(1) << ", " <<q2m(4)<< ", " <<q2m(7) << endl; 
+    cout << q2m(2) << ", " <<q2m(5)<< ", " <<q2m(8) << endl; 
+
+
+
 }
 
 
